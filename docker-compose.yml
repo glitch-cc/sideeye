@@ -1,0 +1,19 @@
+services:
+  bec-detection:
+    build: .
+    restart: always
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.bec.rule=Host(`chaos.cyrenitycyber.com`) && PathPrefix(`/bec`)
+      - traefik.http.routers.bec.tls=true
+      - traefik.http.routers.bec.entrypoints=websecure
+      - traefik.http.routers.bec.tls.certresolver=mytlschallenge
+      - traefik.http.services.bec.loadbalancer.server.port=5006
+      - traefik.http.middlewares.bec-strip.stripprefix.prefixes=/bec
+      - traefik.http.routers.bec.middlewares=bec-strip
+    networks:
+      - root_default
+
+networks:
+  root_default:
+    external: true
