@@ -1,0 +1,19 @@
+# BEC Trust Analyzer - Dependencies
+# 
+# The core POC uses only Python standard library!
+# These are optional for extended functionality:
+
+# For future ML-enhanced stylometry
+# transformers>=4.30.0
+# torch>=2.0.0
+
+# For graph visualization
+# networkx>=3.0
+# matplotlib>=3.7.0
+
+# For API server
+# fastapi>=0.100.0
+# uvicorn>=0.22.0
+
+# For email parsing (production use)
+# email-validator>=2.0.0
