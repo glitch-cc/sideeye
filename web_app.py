@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BEC Detection Web Interface v2
+SideEye Web Interface v2
 Better UX: drag-drop .eml, paste screenshots, paste raw email
 """
 
@@ -27,7 +27,7 @@ DASHBOARD_HTML = r"""
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>BEC Detection Engine</title>
+    <title>SideEye 👀</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
@@ -309,7 +309,7 @@ DASHBOARD_HTML = r"""
     <div class="container">
         <div class="nav"><a href="/">← Back to Chaos Lab</a></div>
         
-        <h1>🛡️ BEC Detection Engine</h1>
+        <h1>🛡️ SideEye 👀</h1>
         <p class="subtitle">Multi-signal Business Email Compromise detection</p>
         
         <div class="grid">
@@ -358,7 +358,7 @@ Hi,
 I need you to process an urgent payment..."></textarea>
                 </div>
                 
-                <button class="analyze-btn" id="analyzeBtn">🔍 Analyze for BEC</button>
+                <button class="analyze-btn" id="analyzeBtn">🔍 Analyze 👀</button>
                 
                 <div class="method-tags">
                     <span class="method-tag">🔗 Trust Graph</span>
@@ -755,5 +755,5 @@ def stats():
 
 
 if __name__ == '__main__':
-    print("Starting BEC Detection Engine on http://0.0.0.0:5006")
+    print("Starting SideEye 👀 on http://0.0.0.0:5006")
     app.run(host='0.0.0.0', port=5006, debug=False)

@@ -1,5 +1,5 @@
 services:
-  bec-detection:
+  sideeye:
     build: .
     restart: always
     networks:
